@@ -1,0 +1,5 @@
+
+#service principal
+az ad app create --display-name Webapp
+az ad sp create --id $appId
+az role assignment create --role contributor --subscription 0327ac12-a6a5-463b-bd9b-6fdc2b473b00 --assignee-object-id  $assigneeObjectId --assignee-principal-type ServicePrincipal --scope /subscriptions/0327ac12-a6a5-463b-bd9b-6fdc2b473b00/resourceGroups/$build-agents-01
